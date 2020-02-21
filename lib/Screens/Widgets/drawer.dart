@@ -8,14 +8,13 @@ class NavDrawer extends StatefulWidget {
 class NavDrawerState extends State<NavDrawer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         children: <Widget>[
           Container(
             height: 60,
             color: Colors.blue,
             child: Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 CircleAvatar(
                   backgroundColor: Colors.indigo,

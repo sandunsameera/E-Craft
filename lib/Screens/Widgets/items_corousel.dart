@@ -7,7 +7,7 @@ class CarouselWithIndicator extends StatefulWidget {
 }
 
 class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
-  int _current = 0;
+  // int _current = 0;
 
   @override
   Widget build(BuildContext context) {

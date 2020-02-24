@@ -1,4 +1,7 @@
 import 'package:e_craft/Screens/Widgets/items_corousel.dart';
+import 'package:e_craft/Screens/decoration_screen.dart';
+import 'package:e_craft/Screens/keytags_screen.dart';
+import 'package:e_craft/Screens/mask_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -68,61 +71,70 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               height: 50,
             ),
-             ListTile(
-              leading: Text(
-                "Other categories",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+            ListTile(
+                leading: Text("Other categories",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "http://4.bp.blogspot.com/-nWDjI8kpnoA/Tt-DmuSN2FI/AAAAAAAAA_A/iLiDtXoU6Jc/s1600/Fire+Mask.jpg"),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Masks",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://img1.etsystatic.com/062/0/7927737/il_570xN.791674227_d9oe.jpg"),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Key tags",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          "https://l7.alamy.com/zooms/0d54af9dfc4744faa7294ff9f12838f6/sri-lanka-crafts-hikkaduwa-laksiri-batiks-fish-design-axx2bn.jpg",
+                  InkWell(
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MaskScreen())),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "http://4.bp.blogspot.com/-nWDjI8kpnoA/Tt-DmuSN2FI/AAAAAAAAA_A/iLiDtXoU6Jc/s1600/Fire+Mask.jpg"),
+                          radius: 40,
                         ),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Decorations",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
+                        SizedBox(height: 20),
+                        Text(
+                          "Masks",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                  InkWell(
+                    onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>KeyTags())),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://img1.etsystatic.com/062/0/7927737/il_570xN.791674227_d9oe.jpg"),
+                          radius: 40,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Key tags",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                  InkWell(
+                    onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>Decorations())),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            "https://l7.alamy.com/zooms/0d54af9dfc4744faa7294ff9f12838f6/sri-lanka-crafts-hikkaduwa-laksiri-batiks-fish-design-axx2bn.jpg",
+                          ),
+                          radius: 40,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Decorations",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-            
             SizedBox(
               height: 12,
             ),
@@ -130,47 +142,53 @@ class _MainScreenState extends State<MainScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://www.ephotozine.com/resize/2014/08/xlrg/221910_1393317524.jpg?RTUdGk5cXyJFBQgJVANtcQlnYF8JERFaGwJRNQh6SlYUAEw1cmsCdg1hAWoxXFNGLSI="),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Pottery works",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  InkWell(
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://www.ephotozine.com/resize/2014/08/xlrg/221910_1393317524.jpg?RTUdGk5cXyJFBQgJVANtcQlnYF8JERFaGwJRNQh6SlYUAEw1cmsCdg1hAWoxXFNGLSI="),
+                          radius: 40,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Pottery works",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "http://www.serendib.btoptions.lk/cpanel/uploader/927/13.jpg"),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Clothes",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  InkWell(
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "http://www.serendib.btoptions.lk/cpanel/uploader/927/13.jpg"),
+                          radius: 40,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Clothes",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
-                  Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://furniture.lk/images/andys/ElephantwithsmallbabyHandEbonywood_13_1144.jpeg"),
-                        radius: 40,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Statues",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  InkWell(
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://furniture.lk/images/andys/ElephantwithsmallbabyHandEbonywood_13_1144.jpeg"),
+                          radius: 40,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Statues",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
